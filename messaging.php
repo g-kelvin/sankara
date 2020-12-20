@@ -9,7 +9,7 @@
     <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
     <!-- Title  -->
-    <title> Elohay Empire Ltd</title>
+       <title>Elohay Empire Ltd</title>
 
     <!-- Favicon  -->
     <link rel="icon" href="img/core-img/favicon.ico">
@@ -29,10 +29,10 @@
     <header class="header-area">
 
         <!-- Top Header Area -->
-        <div class="top-header-area">
+       <div class="top-header-area">
             <div class="h-100 d-md-flex justify-content-between align-items-center">
                 <div class="email-address">
-                    <a href="mailto:info@elohayempire.org">info@elohayempire.org</a>
+                   <a href="mailto:info@elohayempire.org">info@elohayempire.org</a>
                 </div>
                 <div class="phone-number d-flex">
                     <div class="icon">
@@ -67,7 +67,7 @@
                             <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
                         </div>
 
-                        <!-- Nav Start -->
+                       <!-- Nav Start -->
                         <div class="classynav">
                             <ul>
                                 <li><a href="https://elohayempire.org/">Home</a></li>
@@ -133,12 +133,12 @@
     <!-- ##### Header Area End ##### -->
 
     <!-- ##### Breadcumb Area Start ##### -->
-    <section class="breadcumb-area bg-img" style="background-image: url(img/bg-img/hero1.jpg);">
+    <section class="breadcumb-area bg-img" style="background-image: url(img/bg-img/bg3.jpg);">
         <div class="container h-100">
             <div class="row h-100 align-items-center">
                 <div class="col-12">
                     <div class="breadcumb-content">
-                        <h3 class="breadcumb-title">Contact</h3>
+                        <h3 class="breadcumb-title">Contact Us</h3>
                     </div>
                 </div>
             </div>
@@ -146,72 +146,64 @@
     </section>
     <!-- ##### Breadcumb Area End ##### -->
 
-    <section class="south-contact-area section-padding-100">
+     <!-- ##### Featured Properties Area Start ##### -->
+    <section class="featured-properties-area section-padding-100-50">
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <div class="contact-heading">
-                        <h6>Contact info</h6>
+                    <div class="section-heading wow fadeInUp">
+                        <h2>Messaging</h2>
+                        <p>Elohay Empire Limited</p>
                     </div>
                 </div>
             </div>
 
             <div class="row">
-                <div class="col-12 col-lg-4">
-                    <div class="content-sidebar">
-                        <!-- Office Hours -->
-                        <div class="weekly-office-hours">
-                            <ul>
-                                <li class="d-flex align-items-center justify-content-between"><span>Monday - Friday</span> <span>08 AM - 17 PM</span></li>
-                                <li class="d-flex align-items-center justify-content-between"><span>Saturday</span> <span>09 AM - 14 PM</span></li>
-                                <li class="d-flex align-items-center justify-content-between"><span>Sunday</span> <span>Closed</span></li>
-                            </ul>
-                        </div>
-                        <!-- Address -->
-                        <div class="address mt-30">
-                            <h6><img src="img/icons/phone-call.png" alt="">+254 720 628 137</h6>
-                            <h6><img src="img/icons/envelope.png" alt="">info@kimanisankara.co.ke</h6>
-                            <h6><img src="img/icons/location.png" alt=""> Nairobi, Kenyatta Ave, DB house,<br> P.O Box 1234-00100.</h6>
-                        </div>
-                    </div>
-                </div>
 
-                <!-- Contact Form Area -->
-                <div class="col-12 col-lg-8">
-                    <div class="contact-form">
-                        <form action="messaging.php" method="post">
-                            <div class="form-group">
-                                <input type="text" class="form-control" name="text" id="contact-name" placeholder="Your Name">
-                            </div>
-                            <div class="form-group">
-                                <input type="number" class="form-control" name="number" id="contact-number" placeholder="Your Phone">
-                            </div>
-                            <div class="form-group">
-                                <input type="email" class="form-control" name="email" id="contact-email" placeholder="Your Email">
-                            </div>
-                            <div class="form-group">
-                                <textarea class="form-control" name="message" id="message" cols="30" rows="10" placeholder="Your Message"></textarea>
-                            </div>
-                            <button type="submit" class="btn south-btn">Send Message</button>
-                        </form>
-                    </div>
-                </div>
+                <p> <?php 
+	if(!isset($_POST['submit'])){
+		$name = $_POST['name'];
+		$email = $_POST['email'];
+		$telephone = $_POST['telephone'];
+		$message = $_POST['message']; 
+
+		$to = "info@elohayempire.org";
+		$subject = 'Message from Elohay Empire Site'." , ";
+		$msg ="Name: ".$name." , "."Telephone: ".$telephone." , "." Subject: ".$subject."wrote the following: ".$message;
+		$headers ="From: ".$email;
+         if(mail($to,$subject,$msg,$headers)){
+         	
+	      echo "<b>Message Sent. Thank You $name for your message.<b>";
+}
+
+else {
+	echo "yolo";
+	
+}
+
+       
+
+
+	}
+	else
+	{
+		echo "try again";
+	}
+
+ ?></p>
+
+                
+               
+                 
+               
             </div>
         </div>
     </section>
+    <!-- ##### Featured Properties Area End ##### -->
 
-    <!-- Google Maps -->
-    <div class="map-area mb-100">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.805759787697!2d36.82120981393465!3d-1.2908647990584778!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f10d8c8c4ff0d%3A0x8674b6e558d52d8!2sAGIP%20house%2C%20Nairobi!5e0!3m2!1sen!2ske!4v1607245954265!5m2!1sen!2ske" width="1200" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-                </div>
-            </div>
-        </div>
-    </div>
 
-       <!-- ##### Footer Area Start ##### -->
+ 
+    <!-- ##### Footer Area Start ##### -->
     <footer class="footer-area section-padding-100-0 bg-img gradient-background-overlay" style="background-image: url(img/bg-img/cta.jpg);">
         <!-- Main Footer Area -->
         <div class="main-footer-area">
