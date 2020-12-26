@@ -108,7 +108,7 @@
                                 
                                 <li><a href="/expertise">Our Expertise</a></li>
                                 <li><a href="/blog">Blog</a></li>
-                                <li><a href="#">E-Book</a></li>
+                                 <li><a href="https://book.elohayempire.org/">E-Book</a></li>
 
                                
                                 <li><a href="/contact">Contact</a></li>
@@ -166,10 +166,11 @@
 		$name = $_POST['name'];
 		$email = $_POST['email'];
 		$telephone = $_POST['telephone'];
-		$message = $_POST['message']; 
+		$message = $_POST['message'];
+        $subj = $_POST['subject']; 
 
 		$to = "info@elohayempire.org";
-		$subject = 'Message from Elohay Empire Site'." , ";
+		$subject ="Email from Website. Subjects is: ".$subj;
 		$msg ="Name: ".$name." , "."Telephone: ".$telephone." , "." Subject: ".$subject."wrote the following: ".$message;
 		$headers ="From: ".$email;
          if(mail($to,$subject,$msg,$headers)){
