@@ -17,6 +17,12 @@
     <!-- Style CSS -->
     <link rel="stylesheet" href="style.css">
 
+    <style>
+a:hover {
+  background-color: grey;
+}
+</style>
+
 </head>
 
 <body>
